@@ -1,0 +1,11 @@
+.jumbotron {
+  background-image:url("/media/familyDoctor.jpg");
+  background-size: cover;
+  
+}
+.card {
+	background-color: #c3ebeb;
+}
+.patientForm{
+	padding-top: 50px;
+}
