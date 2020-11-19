@@ -40,6 +40,8 @@ body {
 .jumbotron {
   background-image:url("/media/familyDoctor.jpg");
   background-size: cover;
+  padding: 5em inherit;
+  min-height: 500px;
   
 }
 .card {

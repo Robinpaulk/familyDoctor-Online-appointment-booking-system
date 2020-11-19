@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+    <h1>Results</h1>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Doctor Name</th>
+                <th>Category</th>
+                <th>Mobile Number</th>
+                <th>Fees</th>
+                <th>Timings</th>
+                <th>E-mail</th>
+                <th>Locations</th>
+                <th>Book</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="doctor : ${doctors}">
+                <td th:text="${doctor.name}">Product ID</td>
+                <td th:text="${doctor.category}">Name</td>
+                <td th:text="${doctor.mobileNumber}">Mobile Number</td>
+                <td th:text="${doctor.fees}">Fees</td>
+                <td th:text="${doctor.timings}">Timings</td>
+                <td th:text="${doctor.email}">E-mail</td>
+                <td th:text="${doctor.location}">Location</td>
+                <td>
+                <a th:href="@{/api//book/{id}(id=${doctor.docId})}" class="btn btn-primary">Book</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+</body>
+</html>
